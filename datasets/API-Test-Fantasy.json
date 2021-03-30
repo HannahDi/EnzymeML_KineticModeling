@@ -1,0 +1,116 @@
+{
+    "name": "TEST",
+    "vessel": {
+        "name": "VESSEL_TEST",
+        "id_": "v0",
+        "size": 10.0,
+        "unit": "ml"
+    },
+    "protein": [
+        {
+            "name": "PROTEIN_TEST2",
+            "sequence": "SEQ_TEST2",
+            "compartment": "v0",
+            "init_conc": 10.0,
+            "substanceunits": "mmole / l",
+            "ecnumber": "TEST_EC",
+            "uniprotid": "UNIID_TEST"
+        }
+    ],
+    "reactant": [
+        {
+            "name": "TEST_REAC1",
+            "compartment": "v0",
+            "init_conc": 10.0,
+            "substanceunits": "mmole / l",
+            "constant": false,
+            "smiles": "TEST_SMILES",
+            "inchi": "TEST_INCHI"
+        },
+        {
+            "name": "TEST_REAC2",
+            "compartment": "v0",
+            "init_conc": 10.0,
+            "substanceunits": "mmole / l",
+            "constant": true,
+            "smiles": "TEST_SMILES",
+            "inchi": "TEST_INCHI"
+        }
+    ],
+    "reaction": [
+        {
+            "temperature": 283.15,
+            "tempunit": "K",
+            "ph": 7.0,
+            "name": "TEST_REACT",
+            "reversible": true,
+            "kineticmodel": {
+                "equation": "vmax_s1 * s1 / ( s1 + Km )",
+                "parameters": [
+                    {
+                        "name": "vmax",
+                        "reactant": "TEST_REAC1",
+                        "value": 10.0,
+                        "unit": "mM / s"
+                    },
+                    {
+                        "name": "Km",
+                        "reactant": "TEST_REAC1",
+                        "value": 1.0,
+                        "unit": "mM"
+                    }
+                ]
+            },
+            "educts": [
+                {
+                    "species": "TEST_REAC1",
+                    "stoich": 1.0,
+                    "constant": false,
+                    "replicates": [
+                        {
+                            "replica": "TEST_REPL",
+                            "reactant": "TEST_REAC1",
+                            "type_": "conc",
+                            "data_unit": "mmole / l",
+                            "time_unit": "s",
+                            "init_conc": 10.0,
+                            "data": [
+                                1,
+                                2,
+                                3,
+                                4,
+                                5
+                            ],
+                            "time": [
+                                0,
+                                1,
+                                2,
+                                3,
+                                4
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "products": [
+                {
+                    "species": "TEST_REAC2",
+                    "stoich": 1.0,
+                    "constant": false,
+                    "replicates": []
+                }
+            ],
+            "modifiers": [
+                {
+                    "species": "PROTEIN_TEST2",
+                    "stoich": 1.0,
+                    "constant": true,
+                    "replicates": []
+                }
+            ]
+        }
+    ],
+    "doi": "https://identifiers.org/doi:DOI_TEST",
+    "pubmedID": "https://identifiers.org/pubmed:PMID_TEST",
+    "url": "URL_TEST"
+}
