@@ -148,3 +148,4 @@ datasets/*
 !datasets/API-Test-Fantasy.json
 !datasets/EnzymeML_ApPDC.xlsm
 !datasets/Stephan_pH7.xlsx
+!datasets/Michaelis menten Hannah.xlsx
