@@ -149,3 +149,4 @@ datasets/*
 !datasets/EnzymeML_ApPDC.xlsm
 !datasets/Stephan_pH7.xlsx
 !datasets/Michaelis menten Hannah.xlsx
+!datasets/Sandile/
